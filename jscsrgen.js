@@ -71,8 +71,8 @@ $(function() {
           txtStatus.html("<p>Done.</p>");
           return showDone();
         case 'private':
+          return pem["private"] = e.data.pem;
         case 'csr':
-          pem["private"] = e.data.pem;
           return pem.csr = e.data.pem;
       }
     };

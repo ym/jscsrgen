@@ -82,8 +82,9 @@ $ () ->
         when 'done'
           txtStatus.html "<p>Done.</p>"
           showDone()
-        when 'private', 'csr'
+        when 'private'
           pem.private = e.data.pem
+        when 'csr'
           pem.csr     = e.data.pem
 
     worker.postMessage
